@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basit Flask Uygulaması</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <style>
+        .flag {
+            position: absolute;
+            top: 10px;
+            width: 30px;
+            height: 20px;
+        }
+        .flag-left {
+            left: 10px;
+        }
+        .flag-right {
+            right: 10px;
+        }
+        .header {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+        .header h1 {
+            font-size: 2.5em; /* Başlık boyutunu büyütme */
+            margin: 0 20px;
+        }
+        .header img {
+            max-height: 50px;
+        }
+    </style>
+</head>
+<body>
+    <img src="{{ url_for('static', filename='img/images.png') }}" alt="Türk Bayrağı" class="flag flag-left" width="50px">
+    <img src="{{ url_for('static', filename='img/images.png') }}" alt="Türk Bayrağı" class="flag flag-right">
+    <div class="header">
+        <img src="{{ url_for('static', filename='img/images.png') }}" alt="E-Ticaret Sitesi">
+        <h1>Burası bir türk e-ticaret sitesidir</h1>
+    </div>
+    <p>Merhaba öncelikle burada e-ticaret mağazaları olacaktır burada ticaret sitelerinin kısayolları olacaktır buradan daha hızlı bir şekilde girebilirsiniz!</p>
+</body>
+</html>
